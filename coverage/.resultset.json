@@ -204,11 +204,25 @@
           null
         ]
       },
+      "/Users/parkerthomson/rails-engine/spec/factories/items.rb": {
+        "lines": [
+          1,
+          1,
+          4,
+          4,
+          4,
+          null,
+          null
+        ]
+      },
       "/Users/parkerthomson/rails-engine/spec/factories/merchants.rb": {
         "lines": [
           1,
           1,
-          6,
+          2,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -219,13 +233,24 @@
           1,
           1,
           1,
+          1,
+          null,
+          1,
+          1,
+          null,
           null,
           null,
           null
         ]
       },
-      "/Users/parkerthomson/rails-engine/app/models/merchant.rb": {
+      "/Users/parkerthomson/rails-engine/app/models/item.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
           1,
           1,
           null
@@ -238,7 +263,38 @@
           null
         ]
       },
-      "/Users/parkerthomson/rails-engine/spec/requests/api/v1/merchant/merchant_request_spec.rb": {
+      "/Users/parkerthomson/rails-engine/spec/models/merchant_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/parkerthomson/rails-engine/app/models/merchant.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/parkerthomson/rails-engine/spec/requests/api/v1/items/items_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/parkerthomson/rails-engine/spec/requests/api/v1/merchant/items/merchant_items_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -246,7 +302,6 @@
           null,
           1,
           1,
-          1,
           null,
           1,
           null,
@@ -255,15 +310,59 @@
           null,
           1,
           1,
+          1,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/parkerthomson/rails-engine/spec/requests/api/v1/merchant/merchant_request_spec.rb": {
+        "lines": [
+          1,
           null,
           1,
-          1,
-          1,
           null,
           1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
           null
@@ -276,40 +375,41 @@
           1,
           null,
           1,
-          1,
+          0,
           null,
-          1,
+          0,
           null,
-          1,
-          1,
+          0,
+          0,
           null,
-          1,
-          1,
+          0,
+          0,
           null,
-          1,
+          0,
           null,
-          1,
-          3,
-          3,
+          0,
+          0,
+          0,
           null,
-          3,
-          3,
+          0,
+          0,
+          null,
+          0,
+          0,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/parkerthomson/rails-engine/app/controllers/api/v1/merchants_controller.rb": {
+      "/Users/parkerthomson/rails-engine/app/controllers/api/v1/merchants/items_controller.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          null,
-          null,
           1,
-          1,
+          null,
           null,
           null
         ]
@@ -320,10 +420,9 @@
           null
         ]
       },
-      "/Users/parkerthomson/rails-engine/app/serializers/merchant_serializer.rb": {
+      "/Users/parkerthomson/rails-engine/app/serializers/item_serializer.rb": {
         "lines": [
           1,
-          null,
           1,
           1,
           null,
@@ -339,9 +438,14 @@
           null,
           null,
           null,
-          1,
+          null,
+          null,
+          null,
           null,
           1,
+          null,
+          0,
+          null,
           null,
           null,
           null,
@@ -356,6 +460,6 @@
         ]
       }
     },
-    "timestamp": 1662017598
+    "timestamp": 1662060263
   }
 }

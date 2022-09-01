@@ -208,7 +208,7 @@
         "lines": [
           1,
           1,
-          4,
+          6,
           null,
           null
         ]
@@ -235,6 +235,37 @@
         "lines": [
           1,
           1,
+          null
+        ]
+      },
+      "/Users/parkerthomson/rails-engine/spec/requests/api/v1/merchant/merchant_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -276,6 +307,10 @@
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -304,11 +339,23 @@
           null,
           null,
           null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1662016623
+    "timestamp": 1662017598
   }
 }

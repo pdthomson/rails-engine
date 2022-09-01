@@ -2,7 +2,7 @@ class MerchantSerializer
 
   class << self
     def create_merchants(merchants)
-      wip = {
+     {
         data: merchants.map do |merchant|
           {
             id: "#{merchant.id}",
@@ -12,6 +12,18 @@ class MerchantSerializer
             }
           }
         end
+      }
+    end
+
+    def create_merchant(merchant)
+      {
+        data: {
+          id: "#{merchant.id}",
+          type: 'merchant',
+          attributes: {
+            name: merchant.name
+          }
+        }
       }
     end
 

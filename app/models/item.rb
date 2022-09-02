@@ -8,7 +8,7 @@ class Item < ApplicationRecord
   validates_presence_of :merchant_id
 
   def self.name_search(item_name)
-    where("name ILIKE ?", "%#{item_name}").order(:name)
+    where("name ILIKE ?", "%#{item_name}%").order(:name)
   end
 
   def self.min_price_search(item_price)

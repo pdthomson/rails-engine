@@ -23,47 +23,43 @@ RSpec.describe 'Find all items API' do
     items.each do |item|
       expect(item[:attributes][:name]).to_not eq("Apple Watch")
     end
+  end
 
-    it "returns items that cost more than the search" do
-      create(:merchant)
+  it "returns items that cost more than the search" do
+    merchant = Merchant.create!(name: "The Founder")
+    Item.create!(name: 'Mac', description: 'Paper weight', unit_price: 225.00, merchant_id: merchant.id)
+    Item.create!(name: 'Macaroni', description: 'Paper weight', unit_price: 99.00, merchant_id: merchant.id)
+    Item.create!(name: 'Apple Watch', description: 'Paper weight', unit_price: 225.00, merchant_id: merchant.id)
 
-      merchant = Merchant.first
-      Item.create!(name: 'Mac', description: 'Paper weight', unit_price: 225.00, merchant_id: merchant.id)
-      Item.create!(name: 'Macaroni', description: 'Paper weight', unit_price: 99.00, merchant_id: merchant.id)
-      Item.create!(name: 'Apple Watch', description: 'Paper weight', unit_price: 225.00, merchant_id: merchant.id)
+    get "/api/v1/items/find_all?min_price=100"
 
-      get "/api/v1/items/find_all?min_price=100"
+    json_response = JSON.parse(response.body, symbolize_names: true)
+    items = json_response[:data]
 
-      json_response = JSON.parse(resposne.body, symbolize_names: true)
-      items = json_response[:data]
+    expect(items).to be_a(Array)
+    expect(items.count).to eq(2)
 
-      expect(items).to be_a(Array)
-      expect(items.count).to eq(2)
-
-      items.each do |item|
-        expect(item[:attributes][:name]).to_not eq("Macaroni")
-      end
+    items.each do |item|
+      expect(item[:attributes][:name]).to_not eq("Macaroni")
     end
+  end
 
-    it "can return items less than the search" do
-      create(:merchant)
+  it "can return items less than the search" do
+    merchant = Merchant.create!(name: "The Founder")
+    Item.create!(name: 'Mac', description: 'Paper weight', unit_price: 89.00, merchant_id: merchant.id)
+    Item.create!(name: 'Macaroni', description: 'Paper weight', unit_price: 99.99, merchant_id: merchant.id)
+    Item.create!(name: 'Apple Watch', description: 'Paper weight', unit_price: 225.00, merchant_id: merchant.id)
 
-      merchant = Merchant.first
-      Item.create!(name: 'Mac', description: 'Paper weight', unit_price: 89.00, merchant_id: merchant.id)
-      Item.create!(name: 'Macaroni', description: 'Paper weight', unit_price: 99.99, merchant_id: merchant.id)
-      Item.create!(name: 'Apple Watch', description: 'Paper weight', unit_price: 225.00, merchant_id: merchant.id)
+    get "/api/v1/items/find_all?max_price=100"
 
-      get "/api/v1/items/find_all?max_price=100"
+    json_response = JSON.parse(response.body, symbolize_names: true)
+    items = json_response[:data]
 
-      json_response = JSON.parse(resposne.body, symbolize_names: true)
-      items = json_response[:data]
+    expect(items).to be_a(Array)
+    expect(items.count).to eq(2)
 
-      expect(items).to be_a(Array)
-      expect(items.count).to eq(2)
-
-      items.each do |item|
-        expect(item[:attributes][:name]).to_not eq("Apple Watch")
-      end
+    items.each do |item|
+      expect(item[:attributes][:name]).to_not eq("Apple Watch")
     end
   end
 end
